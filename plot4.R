@@ -19,7 +19,7 @@ powerdata$DateTime <- strptime(powerdata$DateTime, format="%d/%m/%Y %H:%M:%S")
 par(mfcol = c(2,2))
 
 ##graph1
-with(powerdata, plot(x=DateTime, y=Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)"))
+with(powerdata, plot(x=DateTime, y=Global_active_power, type="l", xlab="", ylab="Global Active Power"))
 
 ##graph2
 #submetering 1
