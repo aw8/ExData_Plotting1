@@ -19,11 +19,11 @@ powerdata$DateTime <- strptime(powerdata$DateTime, format="%d/%m/%Y %H:%M:%S")
 par(mfcol = c(2,2))
 
 ##graph1
-with(powerdata, plot(x=DateTime, y=Global_active_power, type="l", xlab="Date/Time", ylab="Global Active Power (kilowatts)"))
+with(powerdata, plot(x=DateTime, y=Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)"))
 
 ##graph2
 #submetering 1
-with(powerdata, plot(x=DateTime, y=Sub_metering_1, type="l", xlab="Date/Time", ylab="Energy Sub Metering"))
+with(powerdata, plot(x=DateTime, y=Sub_metering_1, type="l", xlab="", ylab="Energy sub metering"))
 #submetering 2
 with(powerdata, points(x=DateTime, y=Sub_metering_2, type="l", col="red"))
 #submetering 3
@@ -32,10 +32,10 @@ with(powerdata, points(x=DateTime, y=Sub_metering_3, type="l", col="blue"))
 legend("topright", lty=c(1,1), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "blue", "red"), bty="n")
 
 ##graph3
-with(powerdata, plot(x=DateTime, y=Voltage, type="l", xlab="Date/Time", ylab="Voltage"))
+with(powerdata, plot(x=DateTime, y=Voltage, type="l", xlab="datetime", ylab="Voltage"))
 
 ##graph4
-with(powerdata, plot(x=DateTime, y=Global_reactive_power, type="l", xlab="Date/Time", ylab="Global Reactive Power"))
+with(powerdata, plot(x=DateTime, y=Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power"))
 
 #output png file and close the graphics device
 dev.copy(png, file="plot4.png")
